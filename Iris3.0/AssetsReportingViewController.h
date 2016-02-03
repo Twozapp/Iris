@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Group.h"
 
-@interface AssetsReportingViewController : UIViewController
+@interface AssetsReportingViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tblAssets;
+
+@property (nonatomic, strong) Group *selectedGroup;
+@property (nonatomic, assign) NSInteger selectedIndex;
+@property (nonatomic, strong) NSMutableArray *arrAsset;
+@property (weak, nonatomic) IBOutlet UILabel *assetHeader;
+@property (nonatomic , strong) NSDictionary *configeration;
 
 @end

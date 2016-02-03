@@ -659,7 +659,7 @@ const int FrontViewPositionNone = 0xff;
     
     UIViewController *controller = _frontViewController;
     if ( positionDif > 0 ) controller = _rearViewController;
-    else if ( positionDif < 0 ) controller = _rightViewController;
+    //else if ( positionDif < 0 ) controller = _rightViewController;
     
     return controller;
 }

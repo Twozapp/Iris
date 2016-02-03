@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DashboardViewController : UIViewController
+static const NSString *baseURL = @"http://198.57.226.173:8080/irisservices/v3.0/";
+
+@interface DashboardViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *actionButton;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tblViewHeight;
+
+@property (weak, nonatomic) IBOutlet UITableView *tblView;
+@property (weak, nonatomic) IBOutlet UILabel *lblGroups;
+@property (weak, nonatomic) IBOutlet UILabel *lblAssetsHeader;
+@property (weak, nonatomic) IBOutlet UILabel *lblReportingHeader;
+@property (weak, nonatomic) IBOutlet UILabel *lblNotReporting;
+- (IBAction)actionViewAllReport:(id)sender;
 
 - (IBAction)actionButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuBarButton;
@@ -19,6 +29,10 @@
 @property (weak, nonatomic) IBOutlet UIView *viewRecording;
 @property (weak, nonatomic) IBOutlet UIView *viewReporting;
 @property (weak, nonatomic) IBOutlet UIView *viewAlerts;
+@property (weak, nonatomic) IBOutlet UILabel *lblAsset;
+@property (weak, nonatomic) IBOutlet UILabel *lblAssetReporing;
+@property (weak, nonatomic) IBOutlet UILabel *lblAssetNotReporting;
+@property (weak, nonatomic) IBOutlet UILabel *lblAlert;
 - (IBAction)actionAllGroups:(id)sender;
 - (IBAction)actionAsset:(id)sender;
 - (IBAction)actionReporting:(id)sender;

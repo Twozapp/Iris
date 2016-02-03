@@ -9,5 +9,11 @@
 #import "Asset.h"
 
 @implementation Asset
+@synthesize strAssetName;
+@synthesize strGroupName;
+@synthesize strAddress;
+@synthesize strSignal;
+@synthesize strTemperature;
+@synthesize strBattery;
 
 @end

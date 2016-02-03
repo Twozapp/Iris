@@ -22,6 +22,7 @@
 
 -(id)initwithUUChartDataFrame:(CGRect)rect withSource:(id<UUChartDataSource>)dataSource withStyle:(UUChartStyle)style{
     self.dataSource = dataSource;
+    self.backgroundColor = [UIColor blackColor];
     self.chartStyle = style;
     return [self initWithFrame:rect];
 }
@@ -31,7 +32,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor blackColor];
         self.clipsToBounds = NO;
     }
     return self;

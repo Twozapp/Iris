@@ -10,6 +10,8 @@
 #import "UUColor.h"
 #import "UUChartLabel.h"
 
+#define isiPhone  (UI_USER_INTERFACE_IDIOM() == 0)?TRUE:FALSE
+
 @implementation UULineChart
 
 - (id)initWithFrame:(CGRect)frame
@@ -70,7 +72,7 @@
     }
     if ([super respondsToSelector:@selector(setMarkRange:)]) {
         UIView *view = [[UIView alloc]initWithFrame:CGRectMake(UUYLabelwidth, (1-(_markRange.max-_yValueMin)/(_yValueMax-_yValueMin))*chartCavanHeight+UULabelHeight, self.frame.size.width-UUYLabelwidth, (_markRange.max-_markRange.min)/(_yValueMax-_yValueMin)*chartCavanHeight)];
-        view.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.1];
+        view.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.1];
         [self addSubview:view];
     }
 
@@ -84,8 +86,8 @@
             [path addLineToPoint:CGPointMake(self.frame.size.width,UULabelHeight+i*levelHeight)];
             [path closePath];
             shapeLayer.path = path.CGPath;
-            shapeLayer.strokeColor = [[[UIColor blackColor] colorWithAlphaComponent:0.1] CGColor];
-            shapeLayer.fillColor = [[UIColor whiteColor] CGColor];
+            shapeLayer.strokeColor = [[[UIColor redColor] colorWithAlphaComponent:0.8] CGColor];
+            shapeLayer.fillColor = [[UIColor redColor] CGColor];
             shapeLayer.lineWidth = 1;
             [self.layer addSublayer:shapeLayer];
         }
@@ -120,8 +122,8 @@
         [path addLineToPoint:CGPointMake(UUYLabelwidth+i*_xLabelWidth,self.frame.size.height-2*UULabelHeight)];
         [path closePath];
         shapeLayer.path = path.CGPath;
-        shapeLayer.strokeColor = [[[UIColor blackColor] colorWithAlphaComponent:0.1] CGColor];
-        shapeLayer.fillColor = [[UIColor whiteColor] CGColor];
+        shapeLayer.strokeColor = [[[UIColor redColor] colorWithAlphaComponent:0.8] CGColor];
+        shapeLayer.fillColor = [[UIColor redColor] CGColor];
         shapeLayer.lineWidth = 1;
         [self.layer addSublayer:shapeLayer];
     }
@@ -174,7 +176,7 @@
         CAShapeLayer *_chartLine = [CAShapeLayer layer];
         _chartLine.lineCap = kCALineCapRound;
         _chartLine.lineJoin = kCALineJoinBevel;
-        _chartLine.fillColor   = [[UIColor whiteColor] CGColor];
+        _chartLine.fillColor   = [[UIColor blackColor] CGColor];
         _chartLine.lineWidth   = 2.0;
         _chartLine.strokeEnd   = 0.0;
         [self.layer addSublayer:_chartLine];
@@ -261,11 +263,17 @@
     view.layer.borderColor = [[_colors objectAtIndex:index] CGColor]?[[_colors objectAtIndex:index] CGColor]:UUGreen.CGColor;
     
     if (isHollow) {
-        view.backgroundColor = [UIColor whiteColor];
+        view.backgroundColor = [UIColor blackColor];
     }else{
         view.backgroundColor = [_colors objectAtIndex:index]?[_colors objectAtIndex:index]:UUGreen;
         UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(point.x-UUTagLabelwidth/2.0, point.y-UULabelHeight*2, UUTagLabelwidth, UULabelHeight)];
-        label.font = [UIFont systemFontOfSize:10];
+        if (isiPhone) {
+          label.font = [UIFont systemFontOfSize:12];
+        }
+        else
+        {
+        label.font = [UIFont systemFontOfSize:20];
+        }
         label.textAlignment = NSTextAlignmentCenter;
         label.textColor = view.backgroundColor;
         label.text = [NSString stringWithFormat:@"%d",(int)value];

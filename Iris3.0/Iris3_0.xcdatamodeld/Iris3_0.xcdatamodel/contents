@@ -1,4 +1,136 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15B42" minimumToolsVersion="Automatic">
+    <entity name="AlertOverView" representedClassName="AlertOverView" syncable="YES">
+        <attribute name="acknowledged" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="alertcfg" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="alertcfgid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="alertid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="alerttype" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="alerttypeid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="alertvalue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enddatetime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gateway" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gatewayid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lat" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noccurance" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="node" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nodeid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="severity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startdatetime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subgroup" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subgroupid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timezone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="group" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Group" inverseName="alertsummary" inverseEntity="Group" syncable="YES"/>
+    </entity>
+    <entity name="AlertSummary" representedClassName="AlertSummary" syncable="YES">
+        <attribute name="alertCnt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attentionAlertCnt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="criticalALertCnt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="faultAlertCnt" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="group" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Group" inverseName="alertoverview" inverseEntity="Group" syncable="YES"/>
+    </entity>
+    <entity name="Configeration" representedClassName="Configeration" syncable="YES">
+        <attribute name="configid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dashboardSensorView" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="gatewayname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="humidityunit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="incursionenable" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="lightunit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mapView" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="memstype" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="moistureunit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nodename" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="panic_tamper" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pressureunit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="realtimemonitor" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="speedunit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="temperatureunit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vgroupname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vsubgroupname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wirelessSensorView" optional="YES" attributeType="Boolean" syncable="YES"/>
+    </entity>
+    <entity name="GatewayOverView" representedClassName="GatewayOverView" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="alive" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="assetgroupname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assetid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assetname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="batt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="datetime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distance" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="extsensor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="humidity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lat" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="light" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="motion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pressure" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rssi" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speed" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subgroupname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="temperature" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="group" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Group" inverseName="gatewayoverview" inverseEntity="Group" syncable="YES"/>
+        <relationship name="node" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Node" inverseName="nodesummary" inverseEntity="Node" syncable="YES"/>
+    </entity>
+    <entity name="Group" representedClassName="Group" syncable="YES">
+        <attribute name="groupid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupname" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="alertoverview" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="AlertSummary" inverseName="group" inverseEntity="AlertSummary" syncable="YES"/>
+        <relationship name="alertsummary" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="AlertOverView" inverseName="group" inverseEntity="AlertOverView" syncable="YES"/>
+        <relationship name="gatewayoverview" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="GatewayOverView" inverseName="group" inverseEntity="GatewayOverView" syncable="YES"/>
+        <relationship name="nodes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Node" inverseName="group" inverseEntity="Node" syncable="YES"/>
+        <relationship name="overview" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="GroupSummary" inverseName="group" inverseEntity="GroupSummary" syncable="YES"/>
+    </entity>
+    <entity name="GroupSummary" representedClassName="GroupSummary" syncable="YES">
+        <attribute name="groupid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noofasset" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noofNWasset" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noofWasset" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subgroupid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="group" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Group" inverseName="overview" inverseEntity="Group" syncable="YES"/>
+    </entity>
+    <entity name="Node" representedClassName="Node" syncable="YES">
+        <attribute name="analogsensorenable" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assetgroupid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="assetgroupname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descriptions" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="digitalsensorenable" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="extsensortype" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gatewayid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="gatewayname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="groupname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isalive" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isenable" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="model" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="modelid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nodeid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="subgroupid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="subgroupname" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="group" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Group" inverseName="nodes" inverseEntity="Group" syncable="YES"/>
+        <relationship name="nodesummary" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="GatewayOverView" inverseName="node" inverseEntity="GatewayOverView" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="authKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AlertOverView" positionX="-8073" positionY="342" width="128" height="390"/>
+        <element name="AlertSummary" positionX="-8111" positionY="315" width="128" height="120"/>
+        <element name="Configeration" positionX="-8118" positionY="297" width="128" height="315"/>
+        <element name="GatewayOverView" positionX="-8154" positionY="288" width="128" height="390"/>
+        <element name="Group" positionX="-8145" positionY="297" width="128" height="148"/>
+        <element name="GroupSummary" positionX="-8003" positionY="135" width="128" height="135"/>
+        <element name="Node" positionX="-8136" positionY="306" width="128" height="360"/>
+        <element name="User" positionX="-8298" positionY="246" width="128" height="105"/>
+    </elements>
 </model>

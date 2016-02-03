@@ -19,6 +19,8 @@
     [super viewDidLoad];
     [_activityIndicator startAnimating];
     
+    [self setNeedsStatusBarAppearanceUpdate];
+    
     if (![[OnDeck sharedInstance] isUserAlreadyExists])
         [self performSelector:@selector(stopAnimating) withObject:nil afterDelay:3.0];
     else
@@ -39,47 +41,20 @@
 -(void)requestSignIn
 {
     [_activityIndicator stopAnimating];
-    if ([HelpDesk sharedInstance].isInternetAvailable) {
-        
-        
-        
-        NSMutableDictionary *arguments = [[NSMutableDictionary alloc] init];
-        [arguments setObject:[OnDeck sharedInstance].strUserName forKey:@"email"];
-        [arguments setObject:[OnDeck sharedInstance].strPassword forKey:@"password"];
-        
-        [WebServices sharedInstance].webRequestMode = (WebRequestMode *)WEB_REQUEST_LOGIN;
-        [[WebServices sharedInstance] composeWebRequestFromArguments:arguments forWebRequestMode:[WebServices sharedInstance].webRequestMode responseWithStatus:^(NSMutableArray *status){
-            
-            NSString * message = [status objectAtIndex:0];
-            
-            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-            
-            if ([message compare:@"Success"] == NSOrderedSame) {
-                
-                [OnDeck sharedInstance].strUserName = [OnDeck sharedInstance].strUserName;
-                [OnDeck sharedInstance].strPassword = [OnDeck sharedInstance].strPassword;
-                
-                [[OnDeck sharedInstance] setAutoSignIn];
-                
-                UIViewController *svc = [self.storyboard instantiateViewControllerWithIdentifier:@"DashBoard"];
-                svc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-                [self presentViewController:svc animated:YES completion:nil];
-                
-                
-            }
-            else if ([message compare:@"Failure"] == NSOrderedSame){
-                UIViewController *svc = [self.storyboard instantiateViewControllerWithIdentifier:@"SignInNavi"];
-                svc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-                [self presentViewController:svc animated:YES completion:nil];
-            }
-            
-            else{
-                
-            }
-        }];
-    }
-    else{
-    }
+    [OnDeck sharedInstance].strauthKey = [[OnDeck sharedInstance].userPreferences objectForKey:@"authKey"];
+    [OnDeck sharedInstance].strUserName = [[OnDeck sharedInstance].userPreferences objectForKey:@"email"];
+    [OnDeck sharedInstance].strPassword = [[OnDeck sharedInstance].userPreferences objectForKey:@"password"];
+    
+    UIViewController *svc = [self.storyboard instantiateViewControllerWithIdentifier:@"SignInNavi"];
+    svc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:svc animated:NO completion:^{
+        UIViewController *abc = [self.storyboard instantiateViewControllerWithIdentifier:@"DashBoard"];
+        abc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        [svc presentViewController:abc animated:NO completion:nil];
+    }];
+    
+    
+
 }
 
 
@@ -88,6 +63,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
 
 
 @end

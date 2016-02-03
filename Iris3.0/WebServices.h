@@ -14,7 +14,10 @@
 //Declare enum mode for Web Services
 typedef enum {
     
-    WEB_REQUEST_LOGIN
+    WEB_REQUEST_LOGIN,
+    WEB_REQUEST_ASSET_OVERVIEW,
+    WEB_REQUEST_ALERT_OVERVIEW,
+    WEB_REQUEST_ASSET
         
     
     
@@ -43,6 +46,7 @@ typedef enum {
 
 //Parsing
 - (void)getValuesFromResponse:(NSMutableDictionary*)withResponse forWebRequestMode:(WebRequestMode *)webReqMode withTheStatus:(void(^)(NSMutableArray *))handler;
+
 
 
 

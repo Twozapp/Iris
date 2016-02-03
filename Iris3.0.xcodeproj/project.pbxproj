@@ -26,6 +26,7 @@
 		01DFC6171C36B36000F63B65 /* AlertTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DFC6161C36B36000F63B65 /* AlertTableViewController.m */; };
 		01DFC61A1C36C30A00F63B65 /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DFC6191C36C30A00F63B65 /* AlertViewController.m */; };
 		01DFC61D1C36CB3900F63B65 /* AssetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DFC61C1C36CB3900F63B65 /* AssetViewController.m */; };
+		01E116B21C391A780029E76D /* Asset.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E116B11C391A780029E76D /* Asset.m */; };
 		01E282ED1C3668FB006A3AB2 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E282EC1C3668FB006A3AB2 /* NetworkManager.m */; };
 		01E282F11C36697D006A3AB2 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E282F01C36697D006A3AB2 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		01E3443C1C3375DE00AECD56 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E3443B1C3375DE00AECD56 /* LoginViewController.m */; };
@@ -36,6 +37,33 @@
 		01E3DBD51C37A7E400122F9B /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E3DBD41C37A7E400122F9B /* NSString+MD5.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		01E3DBD81C37A80500122F9B /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E3DBD71C37A80500122F9B /* Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		01E3DBDB1C37BBD900122F9B /* OnDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E3DBDA1C37BBD900122F9B /* OnDeck.m */; };
+		EA09EDFE1C4737B400DAFA39 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA09EDFD1C4737B400DAFA39 /* MapKit.framework */; };
+		EA0F01251C4B173F00655E95 /* AssetsReportingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0F01241C4B173F00655E95 /* AssetsReportingViewController.m */; };
+		EA0F01281C4B1A1300655E95 /* AssetsNotReportingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0F01271C4B1A1300655E95 /* AssetsNotReportingViewController.m */; };
+		EA0F012B1C4B910D00655E95 /* AsssetLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0F012A1C4B910D00655E95 /* AsssetLaunchViewController.m */; };
+		EA0FEF711C5BFD40009A965C /* UUBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0FEF661C5BFD40009A965C /* UUBar.m */; };
+		EA0FEF721C5BFD40009A965C /* UUBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0FEF681C5BFD40009A965C /* UUBarChart.m */; };
+		EA0FEF731C5BFD40009A965C /* UUChart.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0FEF6A1C5BFD40009A965C /* UUChart.m */; };
+		EA0FEF741C5BFD40009A965C /* UUChartLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0FEF6C1C5BFD40009A965C /* UUChartLabel.m */; };
+		EA0FEF751C5BFD40009A965C /* UUColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0FEF6E1C5BFD40009A965C /* UUColor.m */; };
+		EA0FEF761C5BFD40009A965C /* UULineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0FEF701C5BFD40009A965C /* UULineChart.m */; };
+		EA2FBF991C491A740062CF2A /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA2FBF971C491A740062CF2A /* Main_iPad.storyboard */; };
+		EA32CF551C53B38C005D4C02 /* GroupSummary+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32CF361C53B38C005D4C02 /* GroupSummary+CoreDataProperties.m */; };
+		EA32CF561C53B38C005D4C02 /* GroupSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32CF381C53B38C005D4C02 /* GroupSummary.m */; };
+		EA32CF571C53B38C005D4C02 /* AlertSummary+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32CF3A1C53B38C005D4C02 /* AlertSummary+CoreDataProperties.m */; };
+		EA32CF581C53B38C005D4C02 /* AlertSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32CF3C1C53B38C005D4C02 /* AlertSummary.m */; };
+		EA32CF591C53B38C005D4C02 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32CF3E1C53B38C005D4C02 /* User+CoreDataProperties.m */; };
+		EA32CF5A1C53B38C005D4C02 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32CF401C53B38C005D4C02 /* User.m */; };
+		EA32CF5B1C53B38C005D4C02 /* AlertOverView+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32CF421C53B38C005D4C02 /* AlertOverView+CoreDataProperties.m */; };
+		EA32CF5C1C53B38C005D4C02 /* AlertOverView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32CF441C53B38C005D4C02 /* AlertOverView.m */; };
+		EA32CF611C53B38C005D4C02 /* Configeration+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32CF4E1C53B38C005D4C02 /* Configeration+CoreDataProperties.m */; };
+		EA32CF621C53B38C005D4C02 /* Configeration.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32CF501C53B38C005D4C02 /* Configeration.m */; };
+		EA32CF6F1C53B4E0005D4C02 /* Node+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32CF6A1C53B4E0005D4C02 /* Node+CoreDataProperties.m */; };
+		EA32CF701C53B4E0005D4C02 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32CF6C1C53B4E0005D4C02 /* Node.m */; };
+		EA32CF751C53B68A005D4C02 /* GatewayOverView+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32CF721C53B68A005D4C02 /* GatewayOverView+CoreDataProperties.m */; };
+		EA32CF761C53B68A005D4C02 /* GatewayOverView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32CF741C53B68A005D4C02 /* GatewayOverView.m */; };
+		EAB37CA01C5A91450038EFB8 /* Group+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB37C9D1C5A91450038EFB8 /* Group+CoreDataProperties.m */; };
+		EAB37CA11C5A91450038EFB8 /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB37C9F1C5A91450038EFB8 /* Group.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +119,8 @@
 		01DFC6191C36C30A00F63B65 /* AlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewController.m; sourceTree = "<group>"; };
 		01DFC61B1C36CB3900F63B65 /* AssetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetViewController.h; sourceTree = "<group>"; };
 		01DFC61C1C36CB3900F63B65 /* AssetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetViewController.m; sourceTree = "<group>"; };
+		01E116B01C391A780029E76D /* Asset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Asset.h; sourceTree = "<group>"; };
+		01E116B11C391A780029E76D /* Asset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Asset.m; sourceTree = "<group>"; };
 		01E282EB1C3668FB006A3AB2 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		01E282EC1C3668FB006A3AB2 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		01E282EF1C36697D006A3AB2 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -111,6 +141,58 @@
 		01E3DBD71C37A80500122F9B /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
 		01E3DBD91C37BBD900122F9B /* OnDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnDeck.h; sourceTree = "<group>"; };
 		01E3DBDA1C37BBD900122F9B /* OnDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnDeck.m; sourceTree = "<group>"; };
+		EA09EDFD1C4737B400DAFA39 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EA0F01231C4B173F00655E95 /* AssetsReportingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetsReportingViewController.h; sourceTree = "<group>"; };
+		EA0F01241C4B173F00655E95 /* AssetsReportingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetsReportingViewController.m; sourceTree = "<group>"; };
+		EA0F01261C4B1A1300655E95 /* AssetsNotReportingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetsNotReportingViewController.h; sourceTree = "<group>"; };
+		EA0F01271C4B1A1300655E95 /* AssetsNotReportingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetsNotReportingViewController.m; sourceTree = "<group>"; };
+		EA0F01291C4B910D00655E95 /* AsssetLaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsssetLaunchViewController.h; sourceTree = "<group>"; };
+		EA0F012A1C4B910D00655E95 /* AsssetLaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsssetLaunchViewController.m; sourceTree = "<group>"; };
+		EA0FEF651C5BFD40009A965C /* UUBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUBar.h; sourceTree = "<group>"; };
+		EA0FEF661C5BFD40009A965C /* UUBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUBar.m; sourceTree = "<group>"; };
+		EA0FEF671C5BFD40009A965C /* UUBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUBarChart.h; sourceTree = "<group>"; };
+		EA0FEF681C5BFD40009A965C /* UUBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUBarChart.m; sourceTree = "<group>"; };
+		EA0FEF691C5BFD40009A965C /* UUChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUChart.h; sourceTree = "<group>"; };
+		EA0FEF6A1C5BFD40009A965C /* UUChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUChart.m; sourceTree = "<group>"; };
+		EA0FEF6B1C5BFD40009A965C /* UUChartLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUChartLabel.h; sourceTree = "<group>"; };
+		EA0FEF6C1C5BFD40009A965C /* UUChartLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUChartLabel.m; sourceTree = "<group>"; };
+		EA0FEF6D1C5BFD40009A965C /* UUColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUColor.h; sourceTree = "<group>"; };
+		EA0FEF6E1C5BFD40009A965C /* UUColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUColor.m; sourceTree = "<group>"; };
+		EA0FEF6F1C5BFD40009A965C /* UULineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UULineChart.h; sourceTree = "<group>"; };
+		EA0FEF701C5BFD40009A965C /* UULineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UULineChart.m; sourceTree = "<group>"; };
+		EA2FBF981C491A740062CF2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		EA32CF351C53B38C005D4C02 /* GroupSummary+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GroupSummary+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EA32CF361C53B38C005D4C02 /* GroupSummary+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GroupSummary+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EA32CF371C53B38C005D4C02 /* GroupSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupSummary.h; sourceTree = "<group>"; };
+		EA32CF381C53B38C005D4C02 /* GroupSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupSummary.m; sourceTree = "<group>"; };
+		EA32CF391C53B38C005D4C02 /* AlertSummary+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AlertSummary+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EA32CF3A1C53B38C005D4C02 /* AlertSummary+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AlertSummary+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EA32CF3B1C53B38C005D4C02 /* AlertSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertSummary.h; sourceTree = "<group>"; };
+		EA32CF3C1C53B38C005D4C02 /* AlertSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertSummary.m; sourceTree = "<group>"; };
+		EA32CF3D1C53B38C005D4C02 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EA32CF3E1C53B38C005D4C02 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EA32CF3F1C53B38C005D4C02 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		EA32CF401C53B38C005D4C02 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		EA32CF411C53B38C005D4C02 /* AlertOverView+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AlertOverView+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EA32CF421C53B38C005D4C02 /* AlertOverView+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AlertOverView+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EA32CF431C53B38C005D4C02 /* AlertOverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertOverView.h; sourceTree = "<group>"; };
+		EA32CF441C53B38C005D4C02 /* AlertOverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertOverView.m; sourceTree = "<group>"; };
+		EA32CF4D1C53B38C005D4C02 /* Configeration+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Configeration+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EA32CF4E1C53B38C005D4C02 /* Configeration+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Configeration+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EA32CF4F1C53B38C005D4C02 /* Configeration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configeration.h; sourceTree = "<group>"; };
+		EA32CF501C53B38C005D4C02 /* Configeration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configeration.m; sourceTree = "<group>"; };
+		EA32CF691C53B4E0005D4C02 /* Node+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Node+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EA32CF6A1C53B4E0005D4C02 /* Node+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Node+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EA32CF6B1C53B4E0005D4C02 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		EA32CF6C1C53B4E0005D4C02 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
+		EA32CF711C53B68A005D4C02 /* GatewayOverView+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GatewayOverView+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EA32CF721C53B68A005D4C02 /* GatewayOverView+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GatewayOverView+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EA32CF731C53B68A005D4C02 /* GatewayOverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GatewayOverView.h; sourceTree = "<group>"; };
+		EA32CF741C53B68A005D4C02 /* GatewayOverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GatewayOverView.m; sourceTree = "<group>"; };
+		EAB37C9C1C5A91450038EFB8 /* Group+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Group+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EAB37C9D1C5A91450038EFB8 /* Group+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Group+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EAB37C9E1C5A91450038EFB8 /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
+		EAB37C9F1C5A91450038EFB8 /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +200,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA09EDFE1C4737B400DAFA39 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +224,7 @@
 		016BDF981C32D404006187C8 = {
 			isa = PBXGroup;
 			children = (
+				EA09EDFD1C4737B400DAFA39 /* MapKit.framework */,
 				016BDFA31C32D404006187C8 /* Iris3.0 */,
 				016BDFC01C32D404006187C8 /* Iris3.0Tests */,
 				016BDFCB1C32D405006187C8 /* Iris3.0UITests */,
@@ -166,6 +250,7 @@
 				016BDFAA1C32D404006187C8 /* ViewController.h */,
 				016BDFAB1C32D404006187C8 /* ViewController.m */,
 				016BDFAD1C32D404006187C8 /* Main.storyboard */,
+				EA2FBF971C491A740062CF2A /* Main_iPad.storyboard */,
 				016BDFDA1C32D9DD006187C8 /* SplashViewController.h */,
 				016BDFDB1C32D9DD006187C8 /* SplashViewController.m */,
 				016BDFDF1C32DD71006187C8 /* DashboardViewController.h */,
@@ -175,8 +260,8 @@
 				01E3443A1C3375DE00AECD56 /* LoginViewController.h */,
 				01E3443B1C3375DE00AECD56 /* LoginViewController.m */,
 				01E3443D1C3375EB00AECD56 /* SignUpViewController.h */,
-				01E3443E1C3375EB00AECD56 /* SignUpViewController.m */,
 				01E3D2181C36585D00CDD95F /* CreateViewController.h */,
+				01E3443E1C3375EB00AECD56 /* SignUpViewController.m */,
 				01E3D2191C36585D00CDD95F /* CreateViewController.m */,
 				01DFC6151C36B36000F63B65 /* AlertTableViewController.h */,
 				01DFC6161C36B36000F63B65 /* AlertTableViewController.m */,
@@ -184,6 +269,13 @@
 				01DFC6191C36C30A00F63B65 /* AlertViewController.m */,
 				01DFC61B1C36CB3900F63B65 /* AssetViewController.h */,
 				01DFC61C1C36CB3900F63B65 /* AssetViewController.m */,
+				EA0F01231C4B173F00655E95 /* AssetsReportingViewController.h */,
+				EA0F01241C4B173F00655E95 /* AssetsReportingViewController.m */,
+				EA0F01261C4B1A1300655E95 /* AssetsNotReportingViewController.h */,
+				EA0F01271C4B1A1300655E95 /* AssetsNotReportingViewController.m */,
+				EA0F01291C4B910D00655E95 /* AsssetLaunchViewController.h */,
+				EA0F012A1C4B910D00655E95 /* AsssetLaunchViewController.m */,
+				EA0FEF641C5BFD2E009A965C /* Graph */,
 				01E282EE1C366905006A3AB2 /* Modal */,
 				016BDFB31C32D404006187C8 /* Assets.xcassets */,
 				016BDFDD1C32DA1C006187C8 /* Logo.png */,
@@ -233,6 +325,38 @@
 		01E282EE1C366905006A3AB2 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
+				EAB37C9C1C5A91450038EFB8 /* Group+CoreDataProperties.h */,
+				EAB37C9D1C5A91450038EFB8 /* Group+CoreDataProperties.m */,
+				EAB37C9E1C5A91450038EFB8 /* Group.h */,
+				EAB37C9F1C5A91450038EFB8 /* Group.m */,
+				EA32CF711C53B68A005D4C02 /* GatewayOverView+CoreDataProperties.h */,
+				EA32CF721C53B68A005D4C02 /* GatewayOverView+CoreDataProperties.m */,
+				EA32CF731C53B68A005D4C02 /* GatewayOverView.h */,
+				EA32CF741C53B68A005D4C02 /* GatewayOverView.m */,
+				EA32CF691C53B4E0005D4C02 /* Node+CoreDataProperties.h */,
+				EA32CF6A1C53B4E0005D4C02 /* Node+CoreDataProperties.m */,
+				EA32CF6B1C53B4E0005D4C02 /* Node.h */,
+				EA32CF6C1C53B4E0005D4C02 /* Node.m */,
+				EA32CF351C53B38C005D4C02 /* GroupSummary+CoreDataProperties.h */,
+				EA32CF361C53B38C005D4C02 /* GroupSummary+CoreDataProperties.m */,
+				EA32CF371C53B38C005D4C02 /* GroupSummary.h */,
+				EA32CF381C53B38C005D4C02 /* GroupSummary.m */,
+				EA32CF391C53B38C005D4C02 /* AlertSummary+CoreDataProperties.h */,
+				EA32CF3A1C53B38C005D4C02 /* AlertSummary+CoreDataProperties.m */,
+				EA32CF3B1C53B38C005D4C02 /* AlertSummary.h */,
+				EA32CF3C1C53B38C005D4C02 /* AlertSummary.m */,
+				EA32CF3D1C53B38C005D4C02 /* User+CoreDataProperties.h */,
+				EA32CF3E1C53B38C005D4C02 /* User+CoreDataProperties.m */,
+				EA32CF3F1C53B38C005D4C02 /* User.h */,
+				EA32CF401C53B38C005D4C02 /* User.m */,
+				EA32CF411C53B38C005D4C02 /* AlertOverView+CoreDataProperties.h */,
+				EA32CF421C53B38C005D4C02 /* AlertOverView+CoreDataProperties.m */,
+				EA32CF431C53B38C005D4C02 /* AlertOverView.h */,
+				EA32CF441C53B38C005D4C02 /* AlertOverView.m */,
+				EA32CF4D1C53B38C005D4C02 /* Configeration+CoreDataProperties.h */,
+				EA32CF4E1C53B38C005D4C02 /* Configeration+CoreDataProperties.m */,
+				EA32CF4F1C53B38C005D4C02 /* Configeration.h */,
+				EA32CF501C53B38C005D4C02 /* Configeration.m */,
 				01E3DBD91C37BBD900122F9B /* OnDeck.h */,
 				01E3DBDA1C37BBD900122F9B /* OnDeck.m */,
 				01E282EF1C36697D006A3AB2 /* Reachability.h */,
@@ -248,11 +372,32 @@
 				01E3DBCE1C37A44300122F9B /* WebServices.m */,
 				01E3DBD01C37A4F600122F9B /* HelpDesk.h */,
 				01E3DBD11C37A4F600122F9B /* HelpDesk.m */,
+				01E116B01C391A780029E76D /* Asset.h */,
+				01E116B11C391A780029E76D /* Asset.m */,
 				016BDFE21C32DFF5006187C8 /* SideMenu */,
 				01E282EB1C3668FB006A3AB2 /* NetworkManager.h */,
 				01E282EC1C3668FB006A3AB2 /* NetworkManager.m */,
 			);
 			name = Modal;
+			sourceTree = "<group>";
+		};
+		EA0FEF641C5BFD2E009A965C /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				EA0FEF651C5BFD40009A965C /* UUBar.h */,
+				EA0FEF661C5BFD40009A965C /* UUBar.m */,
+				EA0FEF671C5BFD40009A965C /* UUBarChart.h */,
+				EA0FEF681C5BFD40009A965C /* UUBarChart.m */,
+				EA0FEF691C5BFD40009A965C /* UUChart.h */,
+				EA0FEF6A1C5BFD40009A965C /* UUChart.m */,
+				EA0FEF6B1C5BFD40009A965C /* UUChartLabel.h */,
+				EA0FEF6C1C5BFD40009A965C /* UUChartLabel.m */,
+				EA0FEF6D1C5BFD40009A965C /* UUColor.h */,
+				EA0FEF6E1C5BFD40009A965C /* UUColor.m */,
+				EA0FEF6F1C5BFD40009A965C /* UULineChart.h */,
+				EA0FEF701C5BFD40009A965C /* UULineChart.m */,
+			);
+			name = Graph;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +467,7 @@
 				TargetAttributes = {
 					016BDFA01C32D404006187C8 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = PEYKUD8Q73;
 					};
 					016BDFBC1C32D404006187C8 = {
 						CreatedOnToolsVersion = 7.2;
@@ -361,6 +507,7 @@
 				016BDFDE1C32DA1C006187C8 /* Logo.png in Resources */,
 				016BDFB71C32D404006187C8 /* LaunchScreen.storyboard in Resources */,
 				016BDFB41C32D404006187C8 /* Assets.xcassets in Resources */,
+				EA2FBF991C491A740062CF2A /* Main_iPad.storyboard in Resources */,
 				016BDFAF1C32D404006187C8 /* Main.storyboard in Resources */,
 				01DFC60E1C36A7C400F63B65 /* DashBoardNavigationBar.xib in Resources */,
 			);
@@ -387,28 +534,54 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA0FEF711C5BFD40009A965C /* UUBar.m in Sources */,
+				EA32CF5A1C53B38C005D4C02 /* User.m in Sources */,
+				EA0F01281C4B1A1300655E95 /* AssetsNotReportingViewController.m in Sources */,
 				016BDFF51C32E990006187C8 /* SideTableViewController.m in Sources */,
 				016BDFF21C32E7A3006187C8 /* SWRevealViewController.m in Sources */,
+				EA32CF551C53B38C005D4C02 /* GroupSummary+CoreDataProperties.m in Sources */,
 				01E3DBD51C37A7E400122F9B /* NSString+MD5.m in Sources */,
 				01E3DBD21C37A4F600122F9B /* HelpDesk.m in Sources */,
+				EA0FEF721C5BFD40009A965C /* UUBarChart.m in Sources */,
 				01DFC6141C36A9FE00F63B65 /* DashBoardNavigationBar.m in Sources */,
+				EA32CF621C53B38C005D4C02 /* Configeration.m in Sources */,
+				EA0FEF731C5BFD40009A965C /* UUChart.m in Sources */,
+				EAB37CA11C5A91450038EFB8 /* Group.m in Sources */,
 				01E282ED1C3668FB006A3AB2 /* NetworkManager.m in Sources */,
 				01E3DBCF1C37A44300122F9B /* WebServices.m in Sources */,
 				01E3DBD81C37A80500122F9B /* Base64.m in Sources */,
 				01DFC61D1C36CB3900F63B65 /* AssetViewController.m in Sources */,
 				01DFC6171C36B36000F63B65 /* AlertTableViewController.m in Sources */,
+				EA32CF611C53B38C005D4C02 /* Configeration+CoreDataProperties.m in Sources */,
 				016BDFDC1C32D9DD006187C8 /* SplashViewController.m in Sources */,
+				EA32CF591C53B38C005D4C02 /* User+CoreDataProperties.m in Sources */,
+				EA32CF5C1C53B38C005D4C02 /* AlertOverView.m in Sources */,
 				016BDFE11C32DD71006187C8 /* DashboardViewController.m in Sources */,
 				01DFC61A1C36C30A00F63B65 /* AlertViewController.m in Sources */,
+				01E116B21C391A780029E76D /* Asset.m in Sources */,
+				EA32CF701C53B4E0005D4C02 /* Node.m in Sources */,
 				016BDFAC1C32D404006187C8 /* ViewController.m in Sources */,
 				01E3443C1C3375DE00AECD56 /* LoginViewController.m in Sources */,
+				EA0FEF761C5BFD40009A965C /* UULineChart.m in Sources */,
+				EA0F012B1C4B910D00655E95 /* AsssetLaunchViewController.m in Sources */,
+				EAB37CA01C5A91450038EFB8 /* Group+CoreDataProperties.m in Sources */,
+				EA0FEF751C5BFD40009A965C /* UUColor.m in Sources */,
 				01E3DBDB1C37BBD900122F9B /* OnDeck.m in Sources */,
 				01E3443F1C3375EB00AECD56 /* SignUpViewController.m in Sources */,
+				EA32CF571C53B38C005D4C02 /* AlertSummary+CoreDataProperties.m in Sources */,
+				EA0FEF741C5BFD40009A965C /* UUChartLabel.m in Sources */,
 				01E3D21A1C36585D00CDD95F /* CreateViewController.m in Sources */,
 				01E282F11C36697D006A3AB2 /* Reachability.m in Sources */,
+				EA0F01251C4B173F00655E95 /* AssetsReportingViewController.m in Sources */,
+				EA32CF751C53B68A005D4C02 /* GatewayOverView+CoreDataProperties.m in Sources */,
+				EA32CF5B1C53B38C005D4C02 /* AlertOverView+CoreDataProperties.m in Sources */,
+				EA32CF561C53B38C005D4C02 /* GroupSummary.m in Sources */,
+				EA32CF6F1C53B4E0005D4C02 /* Node+CoreDataProperties.m in Sources */,
 				016BDFB21C32D404006187C8 /* Iris3_0.xcdatamodeld in Sources */,
+				EA32CF581C53B38C005D4C02 /* AlertSummary.m in Sources */,
 				016BDFA91C32D404006187C8 /* AppDelegate.m in Sources */,
 				016BDFA61C32D404006187C8 /* main.m in Sources */,
+				EA32CF761C53B68A005D4C02 /* GatewayOverView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +633,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		EA2FBF971C491A740062CF2A /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA2FBF981C491A740062CF2A /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -480,7 +661,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Gaurav Sharma (PEYKUD8Q73)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Gaurav Sharma (PEYKUD8Q73)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -502,6 +684,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "1053cbde-f615-410d-bdc0-21e9e6fa8724";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -523,7 +706,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Gaurav Sharma (PEYKUD8Q73)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Gaurav Sharma (PEYKUD8Q73)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -538,6 +722,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "1053cbde-f615-410d-bdc0-21e9e6fa8724";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -547,11 +732,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Gaurav Sharma (PEYKUD8Q73)";
 				INFOPLIST_FILE = Iris3.0/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.freelancer.Iris3.0.Iris3-0";
+				PRODUCT_BUNDLE_IDENTIFIER = com.domainname.iris;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1053cbde-f615-410d-bdc0-21e9e6fa8724";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -559,11 +747,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Gaurav Sharma (PEYKUD8Q73)";
 				INFOPLIST_FILE = Iris3.0/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.freelancer.Iris3.0.Iris3-0";
+				PRODUCT_BUNDLE_IDENTIFIER = com.domainname.iris;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1053cbde-f615-410d-bdc0-21e9e6fa8724";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

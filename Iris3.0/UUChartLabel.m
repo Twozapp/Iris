@@ -28,7 +28,7 @@
         {
             [self setFont:[UIFont boldSystemFontOfSize:20.0f]];
         }
-        [self setTextColor: UUDeepGrey];
+        [self setTextColor: UURed];
         self.backgroundColor = [UIColor clearColor];
         [self setTextAlignment:NSTextAlignmentCenter];
         self.userInteractionEnabled = YES;

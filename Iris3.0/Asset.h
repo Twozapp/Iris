@@ -10,4 +10,11 @@
 
 @interface Asset : NSObject
 
+@property (nonatomic, strong) NSString *strAssetName;
+@property (nonatomic, strong) NSString *strGroupName;
+@property (nonatomic, strong) NSString *strAddress;
+@property (nonatomic, strong) NSString *strBattery;
+@property (nonatomic, strong) NSString *strTemperature;
+@property (nonatomic, strong) NSString *strSignal;
+
 @end

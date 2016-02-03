@@ -25,6 +25,12 @@
 @property (nonatomic, retain) NSString *strName;
 @property (nonatomic, retain) NSString *strUserName;
 @property (nonatomic, retain) NSString *strPassword;
+@property (nonatomic, retain) NSString *strRoleName;
+@property (nonatomic, retain) NSString *strauthKey;
+@property (nonatomic, retain) NSString *strAsset;
+@property (nonatomic, retain) NSString *strReporting;
+@property (nonatomic, retain) NSString *strNotReporting;
+@property (nonatomic, retain) NSString *strAlert;
 
 
 @property (nonatomic, retain) NSUserDefaults *userPreferences;

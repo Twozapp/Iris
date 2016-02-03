@@ -21,6 +21,12 @@
 @synthesize strName;
 @synthesize strUserName;
 @synthesize strPassword;
+@synthesize strauthKey;
+@synthesize strAlert;
+@synthesize strAsset;
+@synthesize strNotReporting;
+@synthesize strReporting;
+@synthesize strRoleName;
 
 
 
@@ -68,6 +74,7 @@
     
     self.strUserName = [userPreferences stringForKey:@"email"] == nil ? @"" : [userPreferences stringForKey:@"email"];
     self.strPassword = [userPreferences stringForKey:@"password"] == nil ? @"" : [userPreferences stringForKey:@"password"];
+    self.strauthKey = [userPreferences stringForKey:@"authKey"] == nil ? @"" : [userPreferences stringForKey:@"authKey"];
    
 }
 
@@ -75,6 +82,7 @@
     
     self.strUserName = [userPreferences stringForKey:@"email"] == nil ? @"" : [userPreferences stringForKey:@"email"];
     self.strPassword = [userPreferences stringForKey:@"password"] == nil ? @"" : [userPreferences stringForKey:@"password"];
+    self.strauthKey = [userPreferences stringForKey:@"authKey"] == nil ? @"" : [userPreferences stringForKey:@"authKey"];
    
     if (![self.strUserName  isEqual: @""] && ![self.strPassword  isEqual:@""] ){
         //User Already Exists
@@ -94,8 +102,8 @@
     //Store User Information into the device
     [userPreferences setObject:self.strUserName forKey:@"email"];
     [userPreferences setObject:self.strPassword forKey:@"password"];
-   
-    
+    [userPreferences setObject:self.strRoleName forKey:@"rolename"];
+    [userPreferences setObject:self.strauthKey forKey:@"authKey"];
     
     //Saving
     [userPreferences synchronize];
@@ -105,6 +113,8 @@
     //Clearing the user preferences
     [userPreferences setObject:@"" forKey:@"email"];
     [userPreferences setObject:@"" forKey:@"password"];
+    [userPreferences setObject:@"" forKey:@"authKey"];
+    [userPreferences setObject:@"" forKey:@"rolename"];
    
     
     [userPreferences synchronize];

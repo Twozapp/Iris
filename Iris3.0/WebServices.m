@@ -10,6 +10,7 @@
 #import <Foundation/Foundation.h>
 #import "HelpDesk.h"
 #import "OnDeck.h"
+#import "Asset.h"
 
 
 
@@ -68,6 +69,16 @@ static const NSString *baseURL = @"http://198.57.226.173:8080/irisservices/v3.0/
             
         }
             break;
+            case WEB_REQUEST_ASSET_OVERVIEW:
+        {
+            webRequest = [NSString stringWithFormat:@"gatewayoverview/%@?groupid=&subgroupid=",[OnDeck sharedInstance].strauthKey];
+        }
+            break;
+            
+            case  WEB_REQUEST_ASSET:
+            {
+                webRequest = [NSString stringWithFormat:@"%@?groupid=&subgroupid=",[OnDeck sharedInstance].strauthKey];
+            }
             
         default:
             break;
@@ -111,6 +122,27 @@ static const NSString *baseURL = @"http://198.57.226.173:8080/irisservices/v3.0/
             
         }
             break;
+            case WEB_REQUEST_ASSET_OVERVIEW:
+        {
+            url = [NSURL URLWithString:[ NSString stringWithFormat:@"http://198.57.226.173:8080/irisservices/v3.0/assetoverview/%@?groupid=&subgroupid=",[OnDeck sharedInstance].strauthKey]];
+        }
+            break;
+            
+            case WEB_REQUEST_ALERT_OVERVIEW:
+        {
+            url = [NSURL URLWithString:[ NSString stringWithFormat:@"http://198.57.226.173:8080/irisservices/v3.0/alert/%@?alerttype=&gatewayid=&subgroupid=&groupid=1",[OnDeck sharedInstance].strauthKey]];
+            
+        }
+            break;
+            
+        case WEB_REQUEST_ASSET:
+        {
+            url = [NSURL URLWithString:[ NSString stringWithFormat:@"http://198.57.226.173:8080/irisservices/v3.0/gatewaysummary/%@?groupid=&subgroupid=&assetgroupid=&assetid=1",[OnDeck sharedInstance].strauthKey]];
+            
+        }
+            break;
+
+           // v3.0/gatewaysummary/{auth}?groupid={String}&subgroupid={String}&assetgroupid={String}&a ssetid={String}
             
         default:break;
     }
@@ -118,11 +150,22 @@ static const NSString *baseURL = @"http://198.57.226.173:8080/irisservices/v3.0/
     NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:10.0f];
     
-    [request setHTTPMethod:@"POST"];
-    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-    [request setHTTPBody:postData];
-    
+    switch ((int)[WebServices sharedInstance].webRequestMode) {
+        case WEB_REQUEST_LOGIN:{
+            [request setHTTPMethod:@"POST"];
+            [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+            [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+            [request setHTTPBody:postData];
+        }
+            
+            
+            break;
+            
+        default:{
+            [request setHTTPMethod:@"GET"];
+        }
+            break;
+    }
     
     
     
@@ -138,16 +181,18 @@ static const NSString *baseURL = @"http://198.57.226.173:8080/irisservices/v3.0/
     NSLog(@"JSON String as Response = %@", json_string);
     
     //Parse the JSON string into a dictionary
+    if (json_string.length == 0) {
+        [[[UIAlertView alloc] initWithTitle:@"Alert" message:@"No Internet Connection" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil] show];
+        return;
+    }
+    else
+    {
     NSMutableDictionary *parsedResponse = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:nil];
+    
     
     //Passes the response to the handler
     handler(parsedResponse);
-    
-    
-    
-    
-    
-    
+    }
     
 }
 
@@ -163,24 +208,19 @@ static const NSString *baseURL = @"http://198.57.226.173:8080/irisservices/v3.0/
             NSMutableDictionary *response = [[NSMutableDictionary alloc] init];
             response = [withResponse objectForKey:@"response"];
             if ([[response objectForKey:@"Msg"] isEqualToString:@"success"]){
-                //NSString *errorCode;
-//                for(id key in response) {
-//                    if ([key isEqualToString:@"success"]){
-//                        //Do nothing continue the next iteration
-//                        continue;
-//                    }els
-                
-                       // [OnDeck sharedInstance].strName = [[[response objectForKey:key] objectForKey:@"role"] objectForKey:@"name"];
+              
                         [OnDeck sharedInstance].strUserName =
                         [response objectForKey:@"username"];
                         [OnDeck sharedInstance].strPassword = [response  objectForKey:@"password"];
+                [OnDeck sharedInstance].strauthKey = [[response objectForKey:@"User"] objectForKey:@"authKey"];
+                [OnDeck sharedInstance].strRoleName = response[@"User"][@"role"][@"name"];
                         
                     //}
                // }
                 
                 NSMutableArray * arraySucess = [[NSMutableArray alloc]init];
                 [arraySucess addObject:@"Success"];
-                
+                [arraySucess addObject:[[response objectForKey:@"User"] objectForKey:@"id"]];
                 handler(arraySucess);
                 
                 return;
@@ -208,7 +248,84 @@ static const NSString *baseURL = @"http://198.57.226.173:8080/irisservices/v3.0/
             
             
             break;
-             
+            case WEB_REQUEST_ASSET_OVERVIEW:
+        {
+            
+            NSLog(@"response %@",withResponse);
+            NSMutableDictionary *response = [[NSMutableDictionary alloc] init];
+            response = [withResponse objectForKey:@"response"];
+            [OnDeck sharedInstance].strAsset = [response objectForKey:@"noofasset"];
+            [OnDeck sharedInstance].strReporting = [response objectForKey:@"noofWasset"];
+            [OnDeck sharedInstance].strNotReporting = [response objectForKey:@"noofNWasset"];
+            
+            
+                    }
+            break;
+            
+            case WEB_REQUEST_ALERT_OVERVIEW:
+        {
+            NSLog(@"response %@",withResponse);
+            NSMutableDictionary *response = [[NSMutableDictionary alloc] init];
+            response = [withResponse objectForKey:@"response"];
+            [OnDeck sharedInstance].strAlert = @"";
+        }
+            break;
+            
+        case WEB_REQUEST_ASSET:
+        {
+            NSMutableArray *arrAsset = [[NSMutableArray alloc] init];
+            NSLog(@"response %@",withResponse);
+            NSMutableDictionary *response = [[NSMutableDictionary alloc] init];
+            response = [withResponse objectForKey:@"response"];
+            
+            if ([[response objectForKey:@"Msg"] isEqualToString:@"Success"]){
+                
+                
+                for(int i = 0; i<[[response objectForKey:@"lastgatewayreport"] count]; i++) {
+                
+                    
+                    Asset *assetList = [[Asset alloc] init];
+                    assetList.strAssetName = [[[response objectForKey:@"lastgatewayreport"] objectAtIndex:i] objectForKey:@"assetname"];
+                    assetList.strGroupName = [[[response objectForKey:@"lastgatewayreport"] objectAtIndex:i] objectForKey:@"groupname"];
+                    assetList.strAddress = [[[response objectForKey:@"lastgatewayreport"] objectAtIndex:i] objectForKey:@"address"];
+                    assetList.strBattery = [[[response objectForKey:@"lastgatewayreport"] objectAtIndex:i] objectForKey:@"batt"];
+                    assetList.strTemperature = [[[response objectForKey:@"lastgatewayreport"] objectAtIndex:i] objectForKey:@"temperature"];
+                    [arrAsset objectAtIndex:i];
+                    
+
+                }
+            
+            
+                NSMutableArray * arraySucess = [[NSMutableArray alloc]init];
+                [arraySucess addObject:@"Success"];
+                [arraySucess addObject:arrAsset];
+                
+                handler(arraySucess);
+                
+                return;
+            }
+            
+            
+            else if ([[withResponse objectForKey:@"error"] isEqualToString:@"OWCE34"]){
+                
+                NSMutableArray * arraySucess = [[NSMutableArray alloc]init];
+                [arraySucess addObject:@"WroungEmail"];
+                handler(arraySucess);
+                
+                return;
+                
+            }
+            
+            else {
+                NSMutableArray * arraySucess = [[NSMutableArray alloc]init];
+                [arraySucess addObject:@"Failure"];
+                handler(arraySucess);
+                
+                return;
+            }
+        }
+            break;
+            
         default:
             break;
     }
