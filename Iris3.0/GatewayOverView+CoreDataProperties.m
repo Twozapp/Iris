@@ -2,7 +2,7 @@
 //  GatewayOverView+CoreDataProperties.m
 //  Iris3.0
 //
-//  Created by Dipin on 17/01/16.
+//  Created by Dipin on 23/01/16.
 //  Copyright © 2016 Priya. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -23,16 +23,18 @@
 @dynamic extsensor;
 @dynamic groupname;
 @dynamic humidity;
+@dynamic lat;
 @dynamic light;
+@dynamic lon;
 @dynamic motion;
 @dynamic pressure;
 @dynamic rssi;
 @dynamic speed;
 @dynamic subgroupname;
 @dynamic temperature;
-@dynamic lat;
-@dynamic lon;
 @dynamic alive;
+@dynamic type;
 @dynamic group;
+@dynamic node;
 
 @end

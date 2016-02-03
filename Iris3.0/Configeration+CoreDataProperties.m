@@ -2,7 +2,7 @@
 //  Configeration+CoreDataProperties.m
 //  Iris3.0
 //
-//  Created by Dipin on 19/01/16.
+//  Created by Dipin on 23/01/16.
 //  Copyright © 2016 Priya. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -13,11 +13,10 @@
 
 @implementation Configeration (CoreDataProperties)
 
-@dynamic wirelessSensorView;
+@dynamic configid;
 @dynamic dashboardSensorView;
 @dynamic gatewayname;
 @dynamic humidityunit;
-@dynamic configid;
 @dynamic incursionenable;
 @dynamic lightunit;
 @dynamic mapView;
@@ -31,5 +30,6 @@
 @dynamic temperatureunit;
 @dynamic vgroupname;
 @dynamic vsubgroupname;
+@dynamic wirelessSensorView;
 
 @end

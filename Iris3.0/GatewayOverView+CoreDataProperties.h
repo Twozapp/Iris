@@ -2,7 +2,7 @@
 //  GatewayOverView+CoreDataProperties.h
 //  Iris3.0
 //
-//  Created by Dipin on 17/01/16.
+//  Created by Dipin on 23/01/16.
 //  Copyright © 2016 Priya. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -25,17 +25,19 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString *extsensor;
 @property (nullable, nonatomic, retain) NSString *groupname;
 @property (nullable, nonatomic, retain) NSString *humidity;
+@property (nullable, nonatomic, retain) NSString *lat;
 @property (nullable, nonatomic, retain) NSString *light;
+@property (nullable, nonatomic, retain) NSString *lon;
 @property (nullable, nonatomic, retain) NSString *motion;
 @property (nullable, nonatomic, retain) NSString *pressure;
 @property (nullable, nonatomic, retain) NSString *rssi;
 @property (nullable, nonatomic, retain) NSString *speed;
 @property (nullable, nonatomic, retain) NSString *subgroupname;
 @property (nullable, nonatomic, retain) NSString *temperature;
-@property (nullable, nonatomic, retain) NSString *lat;
-@property (nullable, nonatomic, retain) NSString *lon;
 @property (nullable, nonatomic, retain) NSNumber *alive;
+@property (nullable, nonatomic, retain) NSString *type;
 @property (nullable, nonatomic, retain) Group *group;
+@property (nullable, nonatomic, retain) Node *node;
 
 @end
 

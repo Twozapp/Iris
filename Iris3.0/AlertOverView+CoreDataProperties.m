@@ -2,7 +2,7 @@
 //  AlertOverView+CoreDataProperties.m
 //  Iris3.0
 //
-//  Created by Dipin on 09/01/16.
+//  Created by Dipin on 23/01/16.
 //  Copyright © 2016 Priya. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -13,28 +13,28 @@
 
 @implementation AlertOverView (CoreDataProperties)
 
-@dynamic alertid;
-@dynamic startdatetime;
-@dynamic enddatetime;
-@dynamic alertvalue;
-@dynamic timezone;
 @dynamic acknowledged;
-@dynamic noccurance;
-@dynamic severity;
-@dynamic alertcfgid;
 @dynamic alertcfg;
-@dynamic alerttypeid;
+@dynamic alertcfgid;
+@dynamic alertid;
 @dynamic alerttype;
-@dynamic nodeid;
-@dynamic node;
-@dynamic gatewayid;
+@dynamic alerttypeid;
+@dynamic alertvalue;
+@dynamic enddatetime;
 @dynamic gateway;
-@dynamic subgroupid;
-@dynamic subgroup;
+@dynamic gatewayid;
 @dynamic groupid;
 @dynamic groupname;
 @dynamic lat;
 @dynamic lon;
+@dynamic noccurance;
+@dynamic node;
+@dynamic nodeid;
+@dynamic severity;
+@dynamic startdatetime;
+@dynamic subgroup;
+@dynamic subgroupid;
+@dynamic timezone;
 @dynamic group;
 
 @end

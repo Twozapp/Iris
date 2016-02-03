@@ -2,7 +2,7 @@
 //  AlertSummary+CoreDataProperties.h
 //  Iris3.0
 //
-//  Created by Dipin on 09/01/16.
+//  Created by Dipin on 23/01/16.
 //  Copyright © 2016 Priya. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu

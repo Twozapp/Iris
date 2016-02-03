@@ -2,7 +2,7 @@
 //  Configeration+CoreDataProperties.h
 //  Iris3.0
 //
-//  Created by Dipin on 19/01/16.
+//  Created by Dipin on 23/01/16.
 //  Copyright © 2016 Priya. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -15,11 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Configeration (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSNumber *wirelessSensorView;
+@property (nullable, nonatomic, retain) NSString *configid;
 @property (nullable, nonatomic, retain) NSNumber *dashboardSensorView;
 @property (nullable, nonatomic, retain) NSString *gatewayname;
 @property (nullable, nonatomic, retain) NSString *humidityunit;
-@property (nullable, nonatomic, retain) NSString *configid;
 @property (nullable, nonatomic, retain) NSNumber *incursionenable;
 @property (nullable, nonatomic, retain) NSString *lightunit;
 @property (nullable, nonatomic, retain) NSNumber *mapView;
@@ -33,6 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString *temperatureunit;
 @property (nullable, nonatomic, retain) NSString *vgroupname;
 @property (nullable, nonatomic, retain) NSString *vsubgroupname;
+@property (nullable, nonatomic, retain) NSNumber *wirelessSensorView;
 
 @end
 

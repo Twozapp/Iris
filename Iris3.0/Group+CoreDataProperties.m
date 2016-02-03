@@ -2,7 +2,7 @@
 //  Group+CoreDataProperties.m
 //  Iris3.0
 //
-//  Created by Dipin on 09/01/16.
+//  Created by Dipin on 28/01/16.
 //  Copyright © 2016 Priya. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -15,9 +15,10 @@
 
 @dynamic groupid;
 @dynamic groupname;
-@dynamic overview;
 @dynamic alertoverview;
-@dynamic gatewayoverview;
 @dynamic alertsummary;
+@dynamic gatewayoverview;
+@dynamic nodes;
+@dynamic overview;
 
 @end
